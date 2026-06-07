@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { Layout } from '@/components/Layout';
 import { HomePage } from '@/pages/HomePage';
 import { UnitsPage } from '@/pages/UnitsPage';
@@ -15,24 +15,22 @@ import { SearchPage } from '@/pages/SearchPage';
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route element={<Layout />}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/units" element={<UnitsPage />} />
-          <Route path="/units/:unitId" element={<UnitDetailPage />} />
-          <Route path="/concepts" element={<ConceptsPage />} />
-          <Route path="/definitions" element={<DefinitionsPage />} />
-          <Route path="/terms" element={<TermsPage />} />
-          <Route path="/questions" element={<QuestionsPage />} />
-          <Route path="/quiz" element={<QuizPage />} />
-          <Route path="/flashcards" element={<FlashcardsPage />} />
-          <Route path="/final-revision" element={<FinalRevisionPage />} />
-          <Route path="/exam-night" element={<ExamNightPage />} />
-          <Route path="/search" element={<SearchPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route element={<Layout />}>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/units" element={<UnitsPage />} />
+        <Route path="/units/:unitId" element={<UnitDetailPage />} />
+        <Route path="/concepts" element={<ConceptsPage />} />
+        <Route path="/definitions" element={<DefinitionsPage />} />
+        <Route path="/terms" element={<TermsPage />} />
+        <Route path="/questions" element={<QuestionsPage />} />
+        <Route path="/quiz" element={<QuizPage />} />
+        <Route path="/flashcards" element={<FlashcardsPage />} />
+        <Route path="/final-revision" element={<FinalRevisionPage />} />
+        <Route path="/exam-night" element={<ExamNightPage />} />
+        <Route path="/search" element={<SearchPage />} />
+      </Route>
+    </Routes>
   );
 }
 
